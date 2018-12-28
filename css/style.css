@@ -1,0 +1,117 @@
+*{
+    margin:0px;
+    padding:0px;
+    background-color: rgb(255, 255, 255);
+}
+p,h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    letter-spacing:1px;
+}
+
+h1{
+    font-size:45px;
+}
+a{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color:black;
+}
+#logo_loc{
+    width:100%;
+    height:150px;
+    margin-top:120px;
+    text-align: center;
+}
+
+#logo_loc img{
+    width:130px;
+}
+#spanSelect{
+    width:100%;
+    height:100px;
+    text-align: center;
+}
+
+.spanLanguage{
+    position: relative;
+    min-width:95px;
+    height:95px;
+    padding: 0;
+    margin: 0 2.3%;
+    display: inline-block;
+    cursor: pointer;
+    text-align:center;
+    background-repeat:no-repeat;
+    border:1.4px solid rgb(197, 197, 197);
+    background-image:url("../images/WorldSprite.png");
+}
+
+.spanLanguage p{
+    margin-top: 130px;
+}
+
+.is_AmericaN{
+ background-position: -10px -10px;
+}
+.is_Europe{
+    background-position: -15px -100px;
+}
+.is_Africa{
+    background-position: -133px -100px;
+}
+.is_AmericaS{
+    background-position: -145px -5px;
+   }
+.is_Asia{
+    background-position: -260px -7px;
+   }
+.is_Australia{
+    background-position: -260px -117px;
+   }
+#countriesHolder{
+    width:100%;
+    height:300px;
+}
+
+#movingLine{
+    position:relative;
+    width:100px;
+    border-top:2px solid black;
+    margin-bottom:-1.8px;
+    opacity:0;
+}
+#countriesHolder{
+    width:70%;
+    margin:20px auto;
+}
+
+#countrySet{
+    display:flex;
+    list-style-type: none;
+}
+#countriesHolder li{
+    padding:20px;
+}
+
+#spanLangDesc{
+    width:75%;
+    height:75px;
+    text-align: center;
+    margin:0 auto;
+}
+
+#spanLangDesc p{
+    display: inline-flex;
+    margin: 30px 73px;
+}
+
+
+#noDisplay{
+    display: flex;
+    width:89%;
+    opacity:0;
+    margin:0 auto;
+    border: 1px solid rgb(231, 231, 231);
+}
+
