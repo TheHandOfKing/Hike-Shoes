@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
 }
 p,h1{
     font-family: 'Oswald', sans-serif;
@@ -93,7 +94,6 @@ a{
 #countriesHolder li{
     padding:20px;
 }
-
 #spanLangDesc{
     width:75%;
     height:75px;

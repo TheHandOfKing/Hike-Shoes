@@ -2,6 +2,14 @@
     margin:0px;
     padding:0px;
     letter-spacing: 1px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    color:rgb(160, 156, 146);
+    font-size: 13px;
+    padding:20px;
 }
 
 #headerBase{
@@ -9,3 +17,107 @@
     width:100%;
     border-bottom: 1px solid rgba(192, 185, 168, 0.568);
 }
+
+ul{
+    display:flex;
+    list-style-type: none;
+    height:100%;
+}
+#headerBase ul li{
+    box-shadow: inset -1px 0 0 0 #e5e5e5;
+    padding-top:5px;
+}
+#ulHolder{
+    height:100%;
+    float:left;
+}
+
+#otherInfo{
+    float:right;
+    display:flex;
+    height:100%;
+}
+
+#otherInfo a{
+    padding:10px;
+}
+
+#headerUse{
+    min-height: 70px;
+    display:flex;
+    border-bottom:1px solid rgba(192, 185, 168, 0.568);
+}
+
+#headerUse img{
+    height: 72px;
+    width:72px;
+    padding:10px;
+    box-sizing: border-box;
+    margin-left:10px;
+}
+
+#midDiv{
+    margin:0 auto;
+}
+
+#discount{
+    height: 60px;
+    background-color: #f7f7f7;
+    width:100%;
+}
+
+#shuffle{
+    margin:0 auto;
+    width: 50%;
+}
+
+#shuffle a{
+    text-align: center;
+    display:inline-flex;
+}
+
+.promoBlock{
+    height:60px;
+    width:60%;
+    margin:0 auto;
+}
+
+.promoBlock p{
+    text-align: center;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+}
+
+.promoBlock a{
+    padding:0;
+    font-size:15px;
+}
+
+.promoBlock .smallP{
+    font-size:12.5px;
+    letter-spacing: 0px;
+    font-weight: 100;
+}
+/*Carousell */
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 14.5%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    right: 67%;
+}
+    #next {
+        right: 31%;
+        border-radius: 3px 0 0 3px;
+    }
+
+    #prev:hover, #next:hover {
+        background-color: rgba(0, 0, 0, 0.034);
+    }

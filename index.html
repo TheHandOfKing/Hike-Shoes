@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" href="images/MikeAndIke.png">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="css/styleForIndex.css" type="text/css">
@@ -11,9 +12,45 @@
 </head>
 <body>
     <div id="headerBase">
-        
+        <div id="ulHolder">
+        <ul>
+            <li><a href="#">Nike +</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Hurley</a></li>
+            <li><a href="#">Converse</a></li>
+        </ul>
     </div>
+    <div id="otherInfo">
+        <ul><a href="login.html">Join/Log In To NikePlus Account</a></ul>
+        <ul><a href="">Help</a></ul>
+        <ul><a href="hikeLangSelect.html">Language Choice</a></ul>
+    </div>
+    </div>
+    <div id="headerUse">
+        <img src="images/testLogo.png" alt="logoImage"/>
 
-
+        <div id="midDiv">
+        
+        </div>
+    </div>
+    <div id="discount">
+            <div id="shuffle">
+                    <div class="promoBlock">
+                        <p>Free Shipping for Members</p>
+                        <p class="smallP">Want it faster and better? <a href="login.html">Login</a> for a one day or a 2 day delivery!</p>
+                    </div>
+                    <div class="promoBlock">
+                        <p>EXTRA 25% OFF ON SALE ITEMS</p>
+                        <p class="smallP">Use the code SAVE25 at any of our stores to get a 25% of on any of our merchandise!</p>
+                    </div>
+                    <div class="promoBlock">
+                        <p>60-DAY FREE RETURNS</p>
+                        <p class="smallP">If you are not satisfied with the merchandise you bought you may return it for another one. Also comes with a 2 year guarantee</p>
+                    </div>
+                    <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a id="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
 </body>
+<script src="js/index.js"></script>
 </html>
