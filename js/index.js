@@ -4,6 +4,9 @@ for(i=0; allCookieStates.length;i++){
     if(document.cookie === allCookieStates[i]){
         alert(document.cookie);
     }
+    else{
+        return;
+    }
 }
 var slidePointer = 1;
 showSlides(slidePointer);
