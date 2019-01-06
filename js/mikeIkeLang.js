@@ -114,7 +114,7 @@ function forHrAndOther(event){
     //Cookie setting and probabble overriding, hope so//
     function cookieMemory(event){
     var getInfo = event.currentTarget.getAttribute("data-states");
-    document.cookie = "stateName=" + getInfo +";expires=Fri, 5 Aug 2019 12:00:00 UTC;";
+    document.cookie = getInfo;
     alert(document.cookie);
     }
     for(i=0; i< northA.length; i++){
