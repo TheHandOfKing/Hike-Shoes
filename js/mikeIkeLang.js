@@ -9,6 +9,7 @@ var Africa = ["Aegiptus", "Morroco", "Tunisia", "Rest of Africa"];
 var AmericaSouth = ["Argentina", "Uruguay", "Chile", "Brasil", "America Latina"];
 var Asia = ["中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India"];
 var Australia = ["Australia", "New Zealand", "Other Countries"];
+var northA = document.getElementsByClassName("northAmericaClass");
 //End of array group
 for(i=0; i<6; i++)  //To make 6 span tags
 {
@@ -35,11 +36,13 @@ function forHrAndOther(event){
     var countryName = checkup.getAttribute("data-country-name");
     var countrySet = document.getElementById("countrySet");
     var movingLine = document.getElementById("movingLine");
+    var northA = document.getElementsByClassName("northAmericaClass");
     countrySet.innerHTML = "";
     movingLine.style.opacity = "1";
     if(countryName === "North America"){
         for(i=0; i< AmericaNorth.length; i++){
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"#\">" + AmericaNorth[i] + "</a></li>"; //note the space here, dora the explorer says it's usefull
+            northA[i].setAttribute("data-states", AmericaNorth[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -51,6 +54,7 @@ function forHrAndOther(event){
     else if(countryName === "Europe"){
         for(i=0; i < Europe.length; i++){ 
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + Europe[i] + "</a></li>";
+            northA[i].setAttribute("data-states", Europe[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -62,6 +66,7 @@ function forHrAndOther(event){
     else if(countryName === "Africa"){
         for(i=0; i < Africa.length; i++){
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + Africa[i] + "</a></li>";
+            northA[i].setAttribute("data-states", Africa[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -73,6 +78,7 @@ function forHrAndOther(event){
     else if(countryName === "South America"){
         for(i=0; i < AmericaSouth.length; i++){
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + AmericaSouth[i] + "</a></li>";
+            northA[i].setAttribute("data-states", AmericaSouth[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -84,6 +90,7 @@ function forHrAndOther(event){
     else if(countryName === "Asia"){
         for(i=0; i < Asia.length; i++){
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + Asia[i] + "</a></li>";
+            northA[i].setAttribute("data-states", Asia[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -95,7 +102,7 @@ function forHrAndOther(event){
     else if(countryName === "Australia"){
         for(i=0; i < Australia.length; i++){
             countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + Australia[i] + "</a></li>";
-
+            northA[i].setAttribute("data-states", Australia[i]);
         }
         for(i=0; i<countryClass.length;i++){
             countryClass[i].style.border = "1px solid rgb(197, 197, 197)";
@@ -105,15 +112,14 @@ function forHrAndOther(event){
         movingLine.style.left = "1376px";
     } 
     //Cookie setting and probabble overriding, hope so//
-    var northA = document.getElementsByClassName("northAmericaClass");
     function cookieMemory(event){
-    var cookieChoice = event.currentTarget.textContent;
-    alert(cookieChoice);
-    document.cookie ='ppkcookie2=another test; expires=Fri, 3 Aug 2001 20:47:11 UTC; path=/'
-    console.log(document.cookie);
+    var getInfo = event.currentTarget.getAttribute("data-states");
+    document.cookie = "stateName=" + getInfo +";expires=Fri, 5 Aug 2019 12:00:00 UTC;";
+    alert(document.cookie);
     }
     for(i=0; i< northA.length; i++){
         northA[i].addEventListener("click", cookieMemory);
+
     }  
 
 }
