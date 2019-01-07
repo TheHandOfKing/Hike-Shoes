@@ -4,6 +4,7 @@
     letter-spacing: 1px;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
 }
 
 a{
@@ -113,11 +114,207 @@ ul{
     border-radius: 0 3px 3px 0;
     right: 67%;
 }
-    #next {
-        right: 31%;
-        border-radius: 3px 0 0 3px;
-    }
+#next {
+    right: 31%;
+    border-radius: 3px 0 0 3px;
+}
 
-    #prev:hover, #next:hover {
-        background-color: rgba(0, 0, 0, 0.034);
-    }
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+#contents{
+    width:100%;
+    height:713px;
+    background-color:rgba(201, 201, 201, 0.39);
+    display: flex;
+    margin-top:5px;
+}
+
+.shoesImages{
+    width:33.3%;
+    display:inline-flex;
+    height:100%;
+    cursor: pointer;
+    margin:0 auto;
+}
+.img0{
+    background: url(../images/img0.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.img1{
+    background: url(../images/img1.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img2{
+        background: url(../images/img2.jpg) no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.img3{
+    background: url(../images/img3.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img4{
+    background: url(../images/img4.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.img5{
+    background: url(../images/img5.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img6{
+    background: url(../images/img6.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img7{
+    background: url(../images/img7.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.img8{
+    background: url(../images/img8.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#registerAndShop{
+    width:100%;
+    height: 170px;
+    margin-top:30px;
+}
+
+#footerBase{
+    width:100%;
+    background-color:rgba(10, 10, 10, 0.945);
+    height: 430px;
+    margin-top:30px;
+}
+
+#middleContent{
+    width:50%;
+    height:100%;
+    margin:0 auto;
+}
+
+#loginBracket{
+    height:inherit;
+    width:50%;
+    margin:0 auto;
+    text-align: center;
+    padding-top:10px;
+}
+
+#loginBracket p:first-child{
+    font-weight: bold;
+    font-size:29px;
+}
+
+#loginDist{
+    margin-top:20px;
+}
+
+#loginBracket a{
+    padding:10px;
+    background-color:black;
+    color:white;
+    border-radius: 2px;
+    margin-right:5px;
+    margin-left:10px;
+}
+
+#contentHolder{
+    width:100%;
+    height: 90%;
+    border-bottom: 1px solid #444;
+}
+
+#biggerPart{
+    width:70%;
+    float:left;
+    height: 100%;
+    display:flex;
+}
+
+.letterContent{
+    width:33%;
+    height:35%;
+    text-align: left;
+    color:white;
+    margin-top:35px;
+}
+
+.letterContent:last-child{
+    border-right:1px solid #444;
+}
+.letterContent p{
+    margin:5px;
+    letter-spacing: .03em;
+    font-size: 14px;
+    padding-left:25px;
+}
+
+#smallerOne{
+    width:30%;
+    float:right;
+    height:100%;
+    text-align: right;
+}
+
+#smallerOne a{
+    font-size:22px;
+    color:white;
+    padding:8px;
+}
+
+#smallerOne i{
+    margin-top:45px;
+}
+
+#bottomContent{
+    height:10%;
+    width:100%;
+}
+
+#rightSide{
+    width:65%;
+    height: 100%;
+    float: right;
+    text-align: right;
+}
+
+#leftSide{
+    width:35%;
+    height:100%;
+    float:left;
+    text-align:left;
+}
