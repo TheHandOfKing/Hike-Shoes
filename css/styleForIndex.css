@@ -561,3 +561,49 @@ ul{
     margin: 0 auto;
     padding: 0 1.5em;
 }
+
+#loginModal{
+    width:100%;
+    height:164.7%;
+    background-color: rgba(0,0,0, 0.7);
+    position: absolute;
+    top:0;
+    display:none;
+}
+
+#loginContent{
+    width:500px;
+    height:300px;
+    background-color:white;
+    margin:180px auto 0px auto;
+    text-align: center;
+    display:none;
+}
+
+#loginContent .closingSpan{
+    width:100%;
+    float:right;
+    text-align:right;
+    margin-right:20px;
+    cursor: pointer;
+    margin-bottom:30px;
+}
+
+#loginContent input{
+    width:80%;
+    padding:5px 0px 5px 0px;
+}
+
+#loginWindow{
+    cursor:pointer;
+}
+
+.loginSpan{
+    width:30%;
+    display:inline-block;
+    padding:10px;
+    background-color:black;
+    margin:50px auto 50px auto;
+    color:white;
+    cursor: pointer;
+}

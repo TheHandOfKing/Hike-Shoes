@@ -122,3 +122,29 @@ var thirdClass = ["GET HELP","Shipping and Delivery","ReturnsPayment", "Options"
 for(i=0; i<thirdClass.length; i++){
     classGet[2].innerHTML += "<p>" + thirdClass[i] + "</p>"; 
 }
+
+//Login sector
+var spanClose = document.getElementsByClassName('closingSpan')[0]
+spanClose.addEventListener('click', closeLogin)
+
+function closeLogin(){
+    var loginContent = document.getElementById("loginContent")
+    loginContent.setAttribute("style", "display:none")
+    var bgGet = document.getElementById("loginModal")
+    bgGet.setAttribute("style", "display:none")
+}//x function close done
+
+//setup for login
+var getLoginButton = document.getElementsByClassName('loginSpan')[0]
+getLoginButton.addEventListener('click', function(){
+    alert("Unfortunatley we dont support this option yet, but you're family so hey, hop in !")
+    closeLogin()
+})
+$( document ).ready(function() {
+    $("#loginWindow").click(function(event){
+        event.preventDefault();
+        $("#loginModal").fadeIn();
+        $("#loginContent").fadeIn();
+      });
+});
+//Register setup wih regexes, similar to upper code 
