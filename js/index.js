@@ -1,18 +1,29 @@
-var AmericaNorth = ["United States", "America Latina", "Canada", "Mexico", "Puerto Rico"];
-var Europe = ["BELGIUM", "BULGARIA", "ČESKÁ", "SERBIA", "DANMARK", "DEUTSCHLAND", "ΕΛΛΑΔΑ", "ESPAÑA", "FINLAND", "FRANCE", "IRELAND", "ISRAEL", "ITALIA"];
-var Africa = ["Aegiptus", "Morroco", "Tunisia", "Rest of Africa"];
-var AmericaSouth = ["Argentina", "Uruguay", "Chile", "Brasil", "America Latina"];
-var Asia = ["中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India"];
-var Australia = ["Australia", "New Zealand", "Other Countries"];
-//Stuff for cookies
-
-/*
-for(i=0; AmericaNorth.length;i++){
-    if(document.cookie = AmericaNorth[i]);
+var localHolder = document.getElementById("placeHolderForCookies");
+var allStates =["United States", "America Latina", "Canada", "Mexico", "Puerto Rico","BELGIUM", "BULGARIA", "ČESKÁ", "SERBIA", "DANMARK", "DEUTSCHLAND", "ΕΛΛΑΔΑ", "ESPAÑA", "FINLAND", "FRANCE", "IRELAND", "ISRAEL", "ITALIA","Aegiptus", "Morroco", "Tunisia", "Rest of Africa","Argentina", "Uruguay", "Chile", "Brasil", "America Latina","中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India","Australia", "New Zealand"];
+for(state in allStates){
+    var localGetter = localStorage.getItem("state")
+    if(localGetter == allStates[state]){
+        localHolder.innerHTML = "You are from  " + localGetter;
+        document.title = "Mike and Hike " + localGetter;
+    }
+    else if(localGetter === "Rest of Africa"){
+        document.title = "Hike Official Central Africa";
+        localHolder.innerHTML = "You are from  Central Africa";
+    }
 }
-*/
+if(localStorage.length == 0){
+    window.location.replace("hikeLangSelect.html")
+}
+//Code above is just an example of a local storage use, i've done this just to ease up on further projects
+//It's a small piece of code that i really like
 
-//Basic slideshow //
+let storageClear = document.getElementById("storageClear");
+storageClear.addEventListener("click", function(){
+    localStorage.clear();
+});
+//Also added a way to clear storage 
+
+
 var slidePointer = 1;
 showSlides(slidePointer);
 

@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+#headerUse h1{
+    margin:10px;
+    right:42%;
+    position: absolute;
+}
 a{
     color:rgb(160, 156, 146);
     font-size: 13px;
@@ -47,6 +52,12 @@ ul{
     min-height: 70px;
     display:flex;
     border-bottom:1px solid rgba(192, 185, 168, 0.568);
+}
+
+#headerUse a{
+    color:rgb(160, 156, 146);
+    font-size: 0px;
+    padding:0px;
 }
 
 #headerUse img{
@@ -128,14 +139,12 @@ ul{
     height:713px;
     background-color:rgba(201, 201, 201, 0.39);
     display: flex;
-    margin-top:5px;
 }
 
 .shoesImages{
     width:33.3%;
     display:inline-flex;
     height:100%;
-    cursor: pointer;
     margin:0 auto;
 }
 .img0{
@@ -214,6 +223,7 @@ ul{
 }
 
 #footerBase{
+    display:flex;
     width:100%;
     background-color:rgba(10, 10, 10, 0.945);
     height: 430px;
@@ -317,4 +327,237 @@ ul{
     height:100%;
     float:left;
     text-align:left;
+}
+
+#placeHolderForCookies{
+    color:rgb(160, 156, 146);
+    font-size: 13px;
+}
+
+#nbaShoesPromo{
+    width:100%;
+    height: 700px;
+    background: url(../images/allStarImage.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shoeHolder{
+    width:97%;
+    height:230px;
+    margin:20px auto;
+}
+
+.descShoe{
+    margin-top:10px;
+    margin-left:40px;
+}
+
+.products{
+    width:20%;
+    height:100%;
+    display:inline-flex;
+    margin-left:20px;
+    margin-right:70px;
+    border-radius:1px;
+}
+
+/* .shoe0{
+    background: url(../images/airJordan.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.shoe1{
+    background: url(../images/leBron.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shoe2{
+        background: url(../images/zoomKobe3.png) no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.shoe3{
+    background: url(../images/kyrie5s.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.flop0{
+    background: url(../images/lakerFlops.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.flop1{
+    background: url(../images/cleveland.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.flop2{
+        background: url(../images/rockets.jpg) no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.flop3{
+    background: url(../images/sanAntonio.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+.price{
+    width:100%;
+    height:50px;
+    display:inline-flex;
+    background-color:rgb(243, 242, 242);
+    cursor: pointer;
+}
+
+.price p{
+    text-align: center;
+}
+
+#cartItemHolder{
+    width:55%;
+    margin:60px auto;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+
+.sectionDesc{
+   margin:0 auto;
+}
+
+.cart{
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item{
+    width: 36%;
+}
+
+.cost{
+    width: 20%;
+    color: #333;
+}
+
+.quantity{
+    width: 35%;
+}
+
+.oneRow{
+    display: flex;
+    width:94%;
+    margin:10px auto;
+}
+
+.cartItemPart{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom:10px;
+    margin:10px auto;
+}
+
+.image-cart{
+    width:38.5%;
+}
+
+.price-cart{
+    width: 20%;
+}
+
+.quantity-cart{
+    width: 35%;
+}
+.cart-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.buttonRemove{
+    cursor: pointer;
+    padding: .67em .67em;
+    color: white;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.totalPrice{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.buttonPurchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    cursor: pointer;
+    padding: .67em .67em;
+    color: white;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.shoeHolder img{
+    height: 200px;
+}
+
+.item-price{
+    font-weight: bold;
+}
+
+.oneRow img{
+    height: 50px;
+}
+
+.cartItems{
+    max-width: 1000px;
+    margin-bottom:20px;
+    padding:0 1.5em;
+}
+
+#allCartHolder{
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
 }

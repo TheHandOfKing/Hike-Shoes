@@ -8,7 +8,7 @@ var Europe = ["BELGIUM", "BULGARIA", "ČESKÁ", "SERBIA", "DANMARK", "DEUTSCHLAN
 var Africa = ["Aegiptus", "Morroco", "Tunisia", "Rest of Africa"];
 var AmericaSouth = ["Argentina", "Uruguay", "Chile", "Brasil", "America Latina"];
 var Asia = ["中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India"];
-var Australia = ["Australia", "New Zealand", "Other Countries"];
+var Australia = ["Australia", "New Zealand"];
 var northA = document.getElementsByClassName("northAmericaClass");
 //End of array group
 for(i=0; i<6; i++)  //To make 6 span tags
@@ -41,7 +41,7 @@ function forHrAndOther(event){
     movingLine.style.opacity = "1";
     if(countryName === "North America"){
         for(i=0; i< AmericaNorth.length; i++){
-            countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"#\">" + AmericaNorth[i] + "</a></li>"; //note the space here, dora the explorer says it's usefull
+            countrySet.innerHTML += "<li><a class=\"northAmericaClass\" href = \"index.html\">" + AmericaNorth[i] + "</a></li>"; //note the space here, dora the explorer says it's usefull
             northA[i].setAttribute("data-states", AmericaNorth[i]);
         }
         for(i=0; i<countryClass.length;i++){
@@ -112,17 +112,13 @@ function forHrAndOther(event){
         movingLine.style.left = "1376px";
     } 
     //Cookie setting and probabble overriding, hope so//
-    function cookieMemory(event){
-    var getInfo = event.currentTarget.getAttribute("data-states");
-    document.cookie = getInfo;
-    alert(document.cookie);
+    function LocalMemory(event){
+       var getInfo = event.currentTarget.getAttribute("data-states");
+       localStorage.setItem("state", getInfo)
     }
     for(i=0; i< northA.length; i++){
-        northA[i].addEventListener("click", cookieMemory);
-
+        northA[i].addEventListener("click", LocalMemory);
     }  
 
 }
-
-
 // Some jquery code needed for the page to work as it's toe to toe original //
