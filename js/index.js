@@ -98,8 +98,8 @@ function thirdSet(){
 firstSet();
 secondSet();
 thirdSet();
-
-//Part for footer//
+//Read the note
+//Part for footer NOTE: I have came across an idea to make just one js extention for this part of code and make everything cleaner, but it came to me at the end of the whole site making thing, and i consider it to be a hassle//
 var classHolder = document.getElementById("biggerPart");
 for(i=0; i<3; i++){
     var newClasses = document.createElement("DIV");
@@ -125,8 +125,9 @@ for(i=0; i<thirdClass.length; i++){
 
 //Login sector
 var spanClose = document.getElementsByClassName('closingSpan')[0]
+var otherLoginClose = document.getElementsByClassName('closingSpan')[1]
 spanClose.addEventListener('click', closeLogin)
-
+otherLoginClose.addEventListener('click', closeLogin)
 function closeLogin(){
     var loginContent = document.getElementById("loginContent")
     loginContent.setAttribute("style", "display:none")
@@ -140,11 +141,54 @@ getLoginButton.addEventListener('click', function(){
     alert("Unfortunatley we dont support this option yet, but you're family so hey, hop in !")
     closeLogin()
 })
-$( document ).ready(function() {
-    $("#loginWindow").click(function(event){
+var getLogin = document.getElementById("loginWindow")
+var getRegister = document.getElementById("register")
+$(document).ready(function() {
+    $(getLogin).click(function(event){
         event.preventDefault();
         $("#loginModal").fadeIn();
         $("#loginContent").fadeIn();
+        $("#registerContent").css("display", "none");
       });
+
+    $(getRegister).click(function(){
+        $("#loginModal").fadeIn();
+        $("#registerContent").fadeIn();
+    });
+    var regeExEmail =/^\w+([\.-]\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    var usernameRegex = /^([a-zA-Z]{3,16})$/
+    //Minimum eight characters, at least one letter and one number:
+    var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+    $('#testName').on('keypress keydown keyup',function(){
+        if (!$(this).val().match(usernameRegex)) {
+            $('#paraUName').removeClass('hidden');
+            $('#paraUName').show();
+        }
+      else{
+           $('#paraUName').addClass('hidden');
+          }
+    });
+    $('#testPassword').on('keypress keydown keyup',function(){
+        if (!$(this).val().match(passwordRegex)) {
+            $('#paraPass').removeClass('hidden');
+            $('#paraPass').show();
+        }
+      else{
+           $('#paraPass').addClass('hidden');
+          }
+    });
+    $('#emailReg').on('keypress keydown keyup',function(){
+        if (!$(this).val().match(regeExEmail)) {
+            $('#paraEmail').removeClass('hidden');
+            $('#paraEmail').show();
+        }
+      else{
+           $('#paraEmail').addClass('hidden');
+          }
+    });
 });
-//Register setup wih regexes, similar to upper code 
+//Register setup wih regexes, similar to upper code, also some content creation done via js, i got the idea to write everything in jquery so it's in the upper part, wish i'd make up mi mind
+var selectGet = document.getElementById("someCountries")
+for(country in allStates){
+    selectGet.innerHTML += `<option> ${allStates[country]} </option>`
+}

@@ -1,20 +1,20 @@
 var localHolder = document.getElementById("placeHolderForCookies");
-var allStates =["United States", "America Latina", "Canada", "Mexico", "Puerto Rico","BELGIUM", "BULGARIA", "ČESKÁ", "SERBIA", "DANMARK", "DEUTSCHLAND", "ΕΛΛΑΔΑ", "ESPAÑA", "FINLAND", "FRANCE", "IRELAND", "ISRAEL", "ITALIA","Aegiptus", "Morroco", "Tunisia", "Rest of Africa","Argentina", "Uruguay", "Chile", "Brasil", "America Latina","中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India","Australia", "New Zealand", "Other Countries"];
-for(state in allStates){
-    var localGetter = localStorage.getItem("state")
-    if(localGetter == allStates[state]){
-        localHolder.innerHTML = "You are from  " + localGetter;
-        document.title = "Mike and Hike " + localGetter;
-    }
-    else if(localGetter === "Rest of Africa"){
-        document.title = "Hike Official Central Africa";
-        localHolder.innerHTML = "You are from  Central Africa";
-    }
-    else if(localGetter === "Other Countries"){
-        document.title = "Hike Official Oceania";
-        localHolder.innerHTML = "You are from  Oceania";
-    }
+var allStates =["United States", "America Latina", "Canada", "Mexico", "Puerto Rico","BELGIUM", "BULGARIA", "ČESKÁ", "SERBIA", "DANMARK", "DEUTSCHLAND", "ΕΛΛΑΔΑ", "ESPAÑA", "FINLAND", "FRANCE", "IRELAND", "ISRAEL", "ITALIA","Aegiptus", "Morroco", "Tunisia", "Rest of AfricaRest of Afr","Argentina", "Uruguay", "Chile", "Brasil", "America Latina","中国大陆", "台灣", "日本", "대한민국", "ประเทศไทย", "India","Australia", "New Zealand"];
+var localGetter = localStorage.getItem("state");
+if(localGetter === "Rest of Africa"){
+    document.title = "Hike Official Central Africa";
+    localHolder.innerHTML = "You are from  Central Africa";
 }
+else{
+    for(state in allStates){
+        if(localGetter == allStates[state]){
+            localHolder.innerHTML = "You are from  " + localGetter;
+            document.title = "Mike and Hike " + localGetter;
+            break;
+        }
+    }   
+}
+
 //Code above is just an example of a local storage use, i've done this just to ease up on further projects
 //It's a small piece of code that i really like
 
@@ -41,7 +41,7 @@ for(i=0; i<secondClass.length; i++){
     classGet[1].innerHTML += "<p>" + secondClass[i] + "</p>"; 
 }
 
-var thirdClass = ["GET HELP","Shipping and Delivery","ReturnsPayment", "Options"];
+var thirdClass = ["GET HELP","Shipping and Delivery","Returns", "Payment", "Options"];
 for(i=0; i<thirdClass.length; i++){
     classGet[2].innerHTML += "<p>" + thirdClass[i] + "</p>"; 
 }
@@ -72,9 +72,9 @@ for(i = 0; i<4; i++){
     image.className += "image" + " " + "flip"+[i]
 }
 
-var shoeFlopsGet = document.getElementsByClassName("products");
+var shoeFlopsGet = document.getElementsByClassName("products")
 for(i =0; i< shoeFlopsGet.length; i++){
-    let spanCreate = document.createElement("SPAN");
+    let spanCreate = document.createElement("SPAN")
     spanCreate.className += "price";
     shoeFlopsGet[i].appendChild(spanCreate); 
 }
@@ -153,7 +153,6 @@ function addItemToCart(title, price, imageSource){
     newCartRow.classList.add('oneRow')
     var cartItemsGetter = document.getElementsByClassName("cartItems")[0]
     var cartNames = document.getElementsByClassName("itemName")
-    console.log(cartNames)
     for (cart in cartNames){
         if(cartNames[cart].innerText == title){
             alert("You have added excess items of this type")

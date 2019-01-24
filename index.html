@@ -15,15 +15,14 @@
     <div id="headerBase">
         <div id="ulHolder">
         <ul>
-            <li><a href="#">Nike +</a></li>
-            <li><a href="#">Jordan</a></li>
-            <li><a href="#">Hurley</a></li>
-            <li><a href="#">Converse</a></li>
+            <li><p>Nike +</a></li>
+            <li><p>Jordan</p></li>
+            <li><p>Hurley</p></li>
+            <li><p>Converse</p></li>
         </ul>
     </div>
     <div id="otherInfo">
         <ul><a id="loginWindow">Join/Log In To NikePlus Account</a></ul>
-        <ul><a href="">Help</a></ul>
         <ul><a id="storageClear" href="hikeLangSelect.html">Language Choice</a></ul>
     </div>
     </div>
@@ -56,10 +55,10 @@
         <div id="loginBracket">
             <p>IMPOSSIBLE AIR</p>
             <p>The boundary-pushing Nike Air VaporMax 2019 ‘Space Walk’.</p>
-        <div id="loginDist">
-            <a href="shop.html">Shop Now</a>
-            <a>New? Register!</a>
-        </div>
+            <div id="loginDist">
+                <a href="shop.html">Shop Now</a>
+                <span id="register">New? Register!</span>
+            </div>
         </div>
     </div>
 
@@ -70,6 +69,22 @@
             <p>Password </p><input type="password">
             <span class="loginSpan">Login</span>
         </div>
+        <div id="registerContent">
+            <span class = "closingSpan">x</span>
+            <h2>BECOME A NIKEPLUS MEMBER</h2>
+            <p class="testEmail hidden" id="paraUName">Username must be between 3 or 16 characters long, without numbers</p><input type="text" placeholder="Username" name="username" id="testName" required>
+            <p class="testEmail hidden" id="paraPass">A password must have a minimum eight characters, at least one letter and one number</p><input type="password" placeholder="Password" id="testPassword" name="password" required>
+            <p class="testEmail hidden" id="paraEmail">E-mail not valid or of incorrect format</p><input type="email" placeholder="E-mail" id="emailReg">
+            <select name="select" id="someCountries">
+                    <option value="" disabled selected>Select Your Country</option>
+            </select>
+        <div id="labelbox">
+            <input type="checkbox" name="checkbox" id="checkbox"><label for="checkbox">Sign up for emails to hear all the latest from Nike.</label>
+        </div>
+        <div id="buttonDiv">
+        <button id="accountConfirm">Create An Account</button>
+    </div>
+        </div>
     </div>
     <footer id="footerBase">
         <div id="middleContent">
@@ -78,14 +93,14 @@
             </div>
             <div id="smallerOne">
                     <a href="https://twitter.com/nike"><i class="fab fa-twitter"></i></a>
-                    <a href=""> <i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"> <i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div id="bottomContent">
             <div id="leftSide">
-                <p id="placeHolderForCookies">Dummy text, for now</p>
+                <p id="placeHolderForCookies">Language not chosen</p>
             </div>
             <div id="rightSide">
                 <a href="#">Sitemap</a>
